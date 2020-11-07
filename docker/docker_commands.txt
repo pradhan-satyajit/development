@@ -1,12 +1,30 @@
-docker run --name satyajit -v E:\Learning\GitHub\development\development\website:/usr/share/nginx/html:ro -d -p 8080:80 nginx:latest
-
+--list all running and stopped container
 docker ps  -a
 
 docker ps  -aq
 
+--start a container
 docker run -d --name satyajit -p 8080:80 2000:80 nginx:latest
 
+--list all containers
 docker container ls
 
+--Stop running container
 docker stop <container name>
 docker stop <container id>
+
+--Remove container
+docker rm <container name>
+
+--Mount volume in Docker
+--ro indicates that the volume mounted is read only. You can't modify contents of this drive
+docker run -p 8080:80 --name satyajit -v E:\Learning\GitHub\development\development\docker\website:/usr/share/nginx/html:ro -d nginx:latest
+
+--Mount volume without READ-only
+docker run -p 8080:80 --name satyajit -v E:\Learning\GitHub\development\development\docker\website:/usr/share/nginx/html -d nginx:latest
+
+--Go into the Container in interactive mode
+docker exec -it <container name> bash
+
+--After the volume is mounted without "ro" command, files created in container, are also visible on the host
+

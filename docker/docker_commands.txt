@@ -1,0 +1,12 @@
+docker run --name satyajit -v E:\Learning\GitHub\development\development\website:/usr/share/nginx/html:ro -d -p 8080:80 nginx:latest
+
+docker ps  -a
+
+docker ps  -aq
+
+docker run -d --name satyajit -p 8080:80 2000:80 nginx:latest
+
+docker container ls
+
+docker stop <container name>
+docker stop <container id>

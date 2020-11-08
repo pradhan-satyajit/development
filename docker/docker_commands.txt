@@ -33,3 +33,7 @@ docker run --name <name of the new container> -d --volumes-from <source containe
 
 --Dockerfile : Allows a user to create his/her own image
 --Check Dockerfile for detailed steps to create a docker file
+
+--Build image from docker file
+docker build --tag satyajit:latest .
+

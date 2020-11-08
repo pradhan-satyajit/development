@@ -28,3 +28,8 @@ docker exec -it <container name> bash
 
 --After the volume is mounted without "ro" command, files created in container, are also visible on the host
 
+--You can have shared volumes between containers
+docker run --name <name of the new container> -d --volumes-from <source container containing actual volume> -p 8081:80 nginx:latest
+
+--Dockerfile : Allows a user to create his/her own image
+--Check Dockerfile for detailed steps to create a docker file
